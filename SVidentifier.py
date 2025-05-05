@@ -42,4 +42,8 @@ print(f"Test Score: {classifier.score(X_test, y_test)}")
 cm = confusion_matrix(y_test, classifier.predict(X_test), normalize='true')
 disp_cm = ConfusionMatrixDisplay(cm, display_labels=classifier.classes_)
 disp_cm.plot()
+plt.title("Support Vector Classifier Performance")
+
+plt.savefig("SVC Matrix.png")
+
 plt.show()
